@@ -2,6 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Nav from './Nav'
 import { StyleSheet, css } from 'aphrodite'
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 const App = ({ children }) => (
   <div className={css(styles.root)}>

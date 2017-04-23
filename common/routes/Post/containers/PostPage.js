@@ -13,7 +13,7 @@ const redial = {
 
 const mapStateToProps = state => selectCurrentPost(state)
 
-const PostPage = ({ title, content, isLoading, error }) => {
+const PostPage = ({ title, content, isLoading, error, Id, ShireKey, City, Photo300, PhotoLarge, PhotoThumb, PublicRemarks, StreetAddressOnly, ListPrice, BedsTotal, BathsTotal, MlsStatus, Latitude, Longitude, Zip}) => {
   if (!error) {
     return (
       <div>
@@ -39,7 +39,22 @@ PostPage.propTypes = {
   title: PropTypes.string,
   content: PropTypes.string,
   isLoading: PropTypes.bool,
-  error: PropTypes.object
+  error: PropTypes.object,
+  Id: PropTypes.string,
+  ShireKey: PropTypes.string,
+  City: PropTypes.string,
+  Photo300: PropTypes.string,
+  PhotoLarge: PropTypes.string,
+  PhotoThumb: PropTypes.string,
+  PublicRemarks: PropTypes.string,
+  StreetAddressOnly: PropTypes.string,
+  ListPrice: PropTypes.number,
+  BedsTotal: PropTypes.number,
+  BathsTotal: PropTypes.number,
+  MlsStatus: PropTypes.string,
+  Latitude: PropTypes.number,
+  Longitude: PropTypes.number,
+  Zip: PropTypes.string
 }
 
 const styles = StyleSheet.create({

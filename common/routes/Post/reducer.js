@@ -5,7 +5,22 @@ const initialState = {
   isLoading: false,
   error: null,
   title: '',
-  content: ''
+  content: '',
+  Id: '',
+  ShireKey: '',
+  City: '',
+  Photo300: '',
+  PhotoLarge: '',
+  PhotoThumb: '',
+  PublicRemarks: '',
+  StreetAddressOnly: '',
+  ListPrice: '',
+  BedsTotal: '',
+  BathsTotal: '',
+  MlsStatus: '',
+  Latitude: '',
+  Longitude: '',
+  Zip: ''
 }
 
 export default function currentPost (state = initialState, action) {
@@ -19,7 +34,23 @@ export default function currentPost (state = initialState, action) {
         title: action.payload.title,
         content: action.payload.content,
         lastFetched: action.meta.lastFetched,
-        isLoading: false}
+        isLoading: false,
+        Id: action.payload.Id,
+        ShireKey: action.payload.ShireKey,
+        City: action.payload.City,
+        Photo300: action.payload.Photo300,
+        PhotoLarge: action.payload.PhotoLarge,
+        PhotoThumb: action.payload.PhotoThumb,
+        PublicRemarks: action.payload.PublicRemarks,
+        StreetAddressOnly: action.payload.StreetAddressOnly,
+        ListPrice: action.payload.ListPrice,
+        BedsTotal: action.payload.BedsTotal,
+        BathsTotal: action.payload.BathsTotal,
+        MlsStatus: action.payload.MlsStatus,
+        Latitude: action.payload.Latitude,
+        Longitude: action.payload.Longitude,
+        Zip: action.payload.Zip
+      }
     case types.LOAD_POST_FAILURE:
       return { ...state,
         error: action.payload }
