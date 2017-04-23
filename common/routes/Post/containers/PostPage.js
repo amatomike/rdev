@@ -6,7 +6,7 @@ import { StyleSheet, css } from 'aphrodite'
 import Helmet from 'react-helmet'
 import NotFound from '../../../components/NotFound'
 import { selectCurrentPost } from '../reducer'
-
+//
 const redial = {
   fetch: ({ dispatch, params: { slug } }) => dispatch(loadPost(slug))
 }
